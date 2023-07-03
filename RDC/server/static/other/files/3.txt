@@ -1,0 +1,35 @@
+New Server Setup
+
+Server has three accounts.
+
+1. Rachelsumner77@outlook account-set up as the master account and administrator 2. Whlogin- this is a local account set up with the following details to allow network access
+
+and sharing without difficulty. a. Password - Buddy
+
+b. Security questions Pet = cat, Both city questions Leeds
+
+3. Westholmegeneral@outlook.com- this is a 365 shared family account and we are using it to
+
+allow access to Microsoft Access without allowing remote users to access any or Rachel's
+
+onedrive documents -
+
+b. pin is 012007
+
+4. I have installed new anydesk settings a. Desk-752880181
+
+a. its password is as before T1midC4t!
+
+b. Password Istryb1tielb. (Capital Indigo, sierra, tango, Romeo, yankee, bravo, number
+
+1, tango, indigo, echo, lima, bravo, full stop)
+
+5. Server is named WESTHOLMESERVER, DBS are in a shared folder on whlogin - this is built into the access database
+
+6. I have reconfigured the backups which are now going to Rachel's onedrive correctly-
+
+These tasks are installed as scheduled on the surfacebook
+
+7. 8.
+
+a. To this end I have mapped Z: on rachels surfacebook to facilitate the autoexecuted batch files

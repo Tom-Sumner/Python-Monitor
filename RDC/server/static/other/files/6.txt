@@ -1,0 +1,21 @@
+SERVER COMPUTER-PRINTER/SHARING STOPPED WORKING
+
+Log in to computer (012007)
+
+Click on Windows icon (bottom left of screen) and choose settingsthen update & security. Click on 'update history' check if asking to restart + update. If so, restart. You will likely see an update as been installed within the last 24 hoursThis will be the one causing the sharing issue
+
+Make a note of which update has just been installed (often starts with a K)
+
+Click on uninstall updates at top of screen
+
+It will take some time to uninstall
+
+Once uninstalled you will need to restart the computer
+
+Once restarted log in again and on the desktop double click the icon 'wushowhide' (whitish image with blue on it)
+
+Enter pin 2705 Click next, wait a few minutes then choose that you want to hide' updates From the list, click on the one you want to hide (the one with the matching K number) which will
+
+stop it autoinstalling again
+
+To Stop 3 fuel Bot from accessory Database Open To bot, control+c restart: Desktop, Press any leeg, then y enter doune dick 'Stat Bot. bat Screen. Minimise

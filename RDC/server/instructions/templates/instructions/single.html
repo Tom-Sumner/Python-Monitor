@@ -1,0 +1,21 @@
+{% extends 'computer/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <h3 class="mt-4"><u>Instruction Details</u></h3>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ instruction.title }}</h5>
+            <p class="card-text">{{ instruction.description }}</p>
+            <p class="card-text">Steps:</p>
+            <ul class="list-group">
+                {% for step in instruction.steps %}
+                    <li class="list-group-item">{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

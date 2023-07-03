@@ -1,0 +1,33 @@
+{% extends 'computer/base.html' %}
+
+{% block content %}
+<div class="container overflow-auto" style="height: 400px;">
+    <div class="text-center">
+        <h3 class="mt-4"><u>All Instructions</u></h3>
+    </div>
+    <div class="row">
+        {% for instruction in instructions %}
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ instruction.title }}</h5>
+                        <p class="card-text">{{ instruction.description }}</p>
+                        <a href="{% url 'singleIns' instruction.id %}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .container.overflow-auto {
+        min-height: 520px;
+        overflow-y: auto;
+    }
+</style>
+{% endblock %}

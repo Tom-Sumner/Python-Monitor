@@ -1,0 +1,35 @@
+rachel@westholmegroup.co.uk
+
+From: Sent:
+
+Roy Glover <roy@jargonfree.net>
+
+14 April 2022 15:41 Rachel Sumner
+
+Setup instructions
+
+Subject:
+
+To:
+
+Method for setting up new mailboxes.
+
+Whatever software you use the type is IMAP
+
+The incoming server is imap.lonos.co.uk
+
+Port 993 and SSL is required
+
+Outgoing is smtp.ionos.co.uk Port 465 and SSL
+
+Your username is your email address, for example matt@westholmegroup.co.uk.
+
+Finally, the password is as provided.
+
+Kind regards,
+
+Roy Glover
+
+Jargonfree
+
+Www.jargonfree.net

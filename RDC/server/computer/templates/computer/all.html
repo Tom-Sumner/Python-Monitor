@@ -1,0 +1,77 @@
+{% extends 'computer/base.html' %}
+
+{% block content %}
+    <div class="container overflow-auto" style="height: 400px;">
+        <div class="text-center">
+            <h3 class="mt-4"><u>Devices</u></h3>
+        </div>
+        <br>
+        <div class="row">
+            {% for computer in computers %}
+                <div class="col-md-4">
+                    <div class="card mb-3 hover-card" onclick="openModal('{{ computer.name }}', '{{ computer.model }}', '{{ computer.anydesk }}', '{{ computer.user }}', '{{ computer.password }}')">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ computer }}</h5>
+                            <p class="card-text">
+                                Name: {{ computer.name }}<br>
+                                Model: {{ computer.model }}<br>
+                                Anydesk: <a href="anydesk:{{ computer.anydesk }}">Connect</a><br>
+                                User: {{ computer.user }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Card Modal -->
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cardModalLabel">Computer Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalDetails"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .container.overflow-auto {
+            min-height: 520;
+            overflow-y: auto;
+        }
+
+        .hover-card {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script>
+        function openModal(name, model, anydesk, user, password) {
+            var modalDetails = document.getElementById("modalDetails");
+            modalDetails.innerHTML = `
+                Name: ${name}<br>
+                Model: ${model}<br>
+                Anydesk: <a href="anydesk:${anydesk}">Connect</a><br>
+                User: ${user}<br>
+                Password: ${password}
+            `;
+
+            $('#cardModal').modal('show');
+        }
+    </script>
+{% endblock %}

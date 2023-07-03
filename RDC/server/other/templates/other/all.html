@@ -1,0 +1,37 @@
+{% extends 'computer/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container overflow-auto" style="height: 400px;">
+    <div class="text-center">
+        <h3 class="mt-4"><u>Documents</u></h3>
+    </div>
+    <div class="row">
+        {% for file_name in file_names %}
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">File: {{ file_name }}</h5>
+                        <a href="{% static 'other/files/' %}{{ file_name }}.png" target="_blank">
+                            <img src="{% static 'other/files/' %}{{ file_name }}.png" alt="Document Image" style="height: 20px; width: 20px;">
+                        </a>
+                        <a href="{% static 'other/files/' %}{{ file_name }}.txt" target="_blank">View Transcript</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .container.overflow-auto {
+        min-height: 520px;
+        overflow-y: auto;
+    }
+</style>
+
+{% endblock %}
